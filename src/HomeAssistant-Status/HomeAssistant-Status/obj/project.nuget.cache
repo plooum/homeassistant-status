@@ -1,0 +1,23 @@
+{
+  "version": 2,
+  "dgSpecHash": "s7bYFQiaqSw=",
+  "success": true,
+  "projectFilePath": "/home/doudou/RiderProjects/homeassistant-status/src/HomeAssistant-Status/HomeAssistant-Status/HomeAssistant-Status.csproj",
+  "expectedPackageFiles": [
+    "/home/doudou/.nuget/packages/microsoft.extensions.hosting/10.0.8/microsoft.extensions.hosting.10.0.8.nupkg.sha512"
+  ],
+  "logs": [
+    {
+      "code": "NU1510",
+      "level": "Warning",
+      "message": "PackageReference Microsoft.Extensions.Hosting will not be pruned. Consider removing this package from your dependencies, as it is likely unnecessary.",
+      "projectPath": "/home/doudou/RiderProjects/homeassistant-status/src/HomeAssistant-Status/HomeAssistant-Status/HomeAssistant-Status.csproj",
+      "warningLevel": 1,
+      "filePath": "/home/doudou/RiderProjects/homeassistant-status/src/HomeAssistant-Status/HomeAssistant-Status/HomeAssistant-Status.csproj",
+      "libraryId": "Microsoft.Extensions.Hosting",
+      "targetGraphs": [
+        "net10.0"
+      ]
+    }
+  ]
+}
