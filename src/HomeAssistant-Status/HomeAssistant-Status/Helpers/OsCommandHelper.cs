@@ -12,7 +12,7 @@ public static class OsCommandHelper
             Arguments = args,
             RedirectStandardOutput = true,
             RedirectStandardError = true,
-            UseShellExecute = false, // Requis pour rediriger les flux (Output/Error)
+            UseShellExecute = false,
             CreateNoWindow = false
         };
 

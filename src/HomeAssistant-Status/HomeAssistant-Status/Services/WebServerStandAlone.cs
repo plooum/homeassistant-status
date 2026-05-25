@@ -9,22 +9,34 @@ using Microsoft.AspNetCore.Http;
 namespace HomeAssistant_Status.Services;
 
 public class WebServerStandAlone(
+    ILogger<WebServerStandAlone> logger,
     ICertificateManager certificateManager, 
     IConfiguration configuration) : IWebServerStandAlone
 {
-    private readonly WebApplication _app = BuildWebApp(certificateManager.GetOrCreateCertificate());
+    private readonly WebApplication _app = BuildWebApp(certificateManager.CreateCertificate());
     private const int Port = 8989;
 
     public async Task Start()
     {
+        if (logger.IsEnabled(LogLevel.Information))
+            logger.LogInformation("Mapping server requests...");
+
         MapRequests();
+        
+        if (logger.IsEnabled(LogLevel.Information))
+            logger.LogInformation("Starting server...");
+        
         await _app.RunAsync();
     }
 
     private void MapRequests()
     {
+        if (logger.IsEnabled(LogLevel.Debug))
+            logger.LogDebug("Mapping /...");
         _app.MapGet("/", () => Results.Ok("ok"));
         
+        if (logger.IsEnabled(LogLevel.Debug))
+            logger.LogDebug("Mapping /shutdown...");
         _app.MapGet("/shutdown/{password}", (string password) =>
         {
             if (password != configuration["Password"])

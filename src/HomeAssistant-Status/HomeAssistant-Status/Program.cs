@@ -3,7 +3,7 @@ using HomeAssistant_Status.Services;
 
 var builder = Host.CreateApplicationBuilder(args);
 builder.Services.AddSingleton<IConfiguration>(new ConfigurationBuilder()
-    .SetBasePath(AppContext.BaseDirectory) // Là où s'exécute l'app
+    .SetBasePath(AppContext.BaseDirectory)
     .AddJsonFile("appsettings.json", optional: false, reloadOnChange: true)
     .Build());
 builder.Services.AddSingleton<IPasswordGenerator, PasswordGenerator>();

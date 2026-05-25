@@ -4,5 +4,5 @@ namespace HomeAssistant_Status.Services;
 
 public interface ICertificateManager
 {
-    public X509Certificate2 GetOrCreateCertificate();
+    public X509Certificate2 CreateCertificate();
 }
