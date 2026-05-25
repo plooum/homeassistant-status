@@ -1,62 +1,11 @@
 {
   "version": 3,
   "targets": {
-    "net10.0": {
-      "Microsoft.Extensions.Hosting/10.0.8": {
-        "type": "package",
-        "compile": {
-          "lib/net10.0/_._": {
-            "related": ".xml"
-          }
-        },
-        "runtime": {
-          "lib/net10.0/_._": {
-            "related": ".xml"
-          }
-        },
-        "build": {
-          "buildTransitive/net8.0/_._": {}
-        }
-      }
-    }
+    "net10.0": {}
   },
-  "libraries": {
-    "Microsoft.Extensions.Hosting/10.0.8": {
-      "sha512": "VfEyM2BipThcSd0GG/FS2ZPCVCTiosVq2zLKEDsfeMIg78sOVZPEmS7CgWlb+dqTlgXvLSL4OG2q6sM4xRhHNg==",
-      "type": "package",
-      "path": "microsoft.extensions.hosting/10.0.8",
-      "files": [
-        ".nupkg.metadata",
-        ".signature.p7s",
-        "Icon.png",
-        "PACKAGE.md",
-        "THIRD-PARTY-NOTICES.TXT",
-        "buildTransitive/net461/Microsoft.Extensions.Hosting.targets",
-        "buildTransitive/net462/_._",
-        "buildTransitive/net8.0/_._",
-        "buildTransitive/netcoreapp2.0/Microsoft.Extensions.Hosting.targets",
-        "lib/net10.0/Microsoft.Extensions.Hosting.dll",
-        "lib/net10.0/Microsoft.Extensions.Hosting.xml",
-        "lib/net462/Microsoft.Extensions.Hosting.dll",
-        "lib/net462/Microsoft.Extensions.Hosting.xml",
-        "lib/net8.0/Microsoft.Extensions.Hosting.dll",
-        "lib/net8.0/Microsoft.Extensions.Hosting.xml",
-        "lib/net9.0/Microsoft.Extensions.Hosting.dll",
-        "lib/net9.0/Microsoft.Extensions.Hosting.xml",
-        "lib/netstandard2.0/Microsoft.Extensions.Hosting.dll",
-        "lib/netstandard2.0/Microsoft.Extensions.Hosting.xml",
-        "lib/netstandard2.1/Microsoft.Extensions.Hosting.dll",
-        "lib/netstandard2.1/Microsoft.Extensions.Hosting.xml",
-        "microsoft.extensions.hosting.10.0.8.nupkg.sha512",
-        "microsoft.extensions.hosting.nuspec",
-        "useSharedDesignerContext.txt"
-      ]
-    }
-  },
+  "libraries": {},
   "projectFileDependencyGroups": {
-    "net10.0": [
-      "Microsoft.Extensions.Hosting >= 10.0.8"
-    ]
+    "net10.0": []
   },
   "packageFolders": {
     "/home/doudou/.nuget/packages/": {}
@@ -100,12 +49,6 @@
     "frameworks": {
       "net10.0": {
         "targetAlias": "net10.0",
-        "dependencies": {
-          "Microsoft.Extensions.Hosting": {
-            "target": "Package",
-            "version": "[10.0.8, )"
-          }
-        },
         "imports": [
           "net461",
           "net462",
@@ -542,17 +485,5 @@
         }
       }
     }
-  },
-  "logs": [
-    {
-      "code": "NU1510",
-      "level": "Warning",
-      "warningLevel": 1,
-      "message": "PackageReference Microsoft.Extensions.Hosting will not be pruned. Consider removing this package from your dependencies, as it is likely unnecessary.",
-      "libraryId": "Microsoft.Extensions.Hosting",
-      "targetGraphs": [
-        "net10.0"
-      ]
-    }
-  ]
+  }
 }
