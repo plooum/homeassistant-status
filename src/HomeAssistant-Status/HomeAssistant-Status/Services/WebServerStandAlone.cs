@@ -33,10 +33,12 @@ public class WebServerStandAlone(
     {
         if (logger.IsEnabled(LogLevel.Debug))
             logger.LogDebug("Mapping /...");
+        
         _app.MapGet("/", () => Results.Ok("ok"));
         
         if (logger.IsEnabled(LogLevel.Debug))
             logger.LogDebug("Mapping /shutdown...");
+        
         _app.MapGet("/shutdown/{password}", (string password) =>
         {
             if (password != configuration["Password"])
