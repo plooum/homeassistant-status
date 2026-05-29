@@ -1,7 +1,8 @@
-debug
-Debug
-obj
-Obj
-release
-Release
-bin
+*debug
+*Debug
+*obj
+*Obj
+*release
+*Release
+*bin
+*.dll
