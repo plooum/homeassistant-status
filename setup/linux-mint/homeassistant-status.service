@@ -1,0 +1,13 @@
+[Unit]
+Description=HomeAssistant Status
+After=network.target
+
+[Service]
+ExecStart=/home/homeassistant-status/start-service.sh
+Restart=always
+RestartSec=5s
+LimitNOFILE=4096
+LimitNPROC=2048
+
+[Install]
+WantedBy=default.target
